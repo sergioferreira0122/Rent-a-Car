@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="536.0" prefWidth="1125.0"
+            xmlns="http://javafx.com/javafx/19">
+    <children>
+        <ImageView pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-1.0">
+            <image>
+                <Image url="@../../../splashscreen.PNG"/>
+            </image>
+        </ImageView>
+    </children>
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+</AnchorPane>

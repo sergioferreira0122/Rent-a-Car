@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1"
+      fx:controller="aluguer.veiculos.aluguerveiculos.Controllers.GestaoAluguerController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1100.0">
+            <left>
+                <AnchorPane prefHeight="600.0" prefWidth="202.0" styleClass="left-form"
+                            stylesheets="@style-light-mode.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane prefHeight="600.0" prefWidth="202.0" styleClass="left-form"
+                                    stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="26.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../../../icons/user.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="55.0" layoutY="150.0" styleClass="textoPreto"
+                                       stylesheets="@style-light-mode.css" text="Bem-Vindo,">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="nomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0"
+                                       layoutY="175.0" prefWidth="165.0" styleClass="textoPreto"
+                                       stylesheets="@style-light-mode.css" text="Placeholder" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="homepageBTN" layoutX="40.0" layoutY="245.0" mnemonicParsing="false"
+                                        onAction="#homepageHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Página Inicial">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="pedidoBTN" layoutX="40.0" layoutY="335.0" mnemonicParsing="false"
+                                        onAction="#pedidoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Fazer Pedido">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Line endX="60.99998474121094" endY="-1.52587890625E-5" layoutX="120.0" layoutY="220.0"
+                                      startX="-100.0"/>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="250.0">
+                                    <image>
+                                        <Image url="@../../../icons/home.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="560.0">
+                                    <image>
+                                        <Image url="@../../../icons/logout.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="340.0">
+                                    <image>
+                                        <Image url="@../../../icons/plus.png"/>
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="gestaoBTN" layoutX="40.0" layoutY="275.0" mnemonicParsing="false"
+                                        onAction="#gestaoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Gestão">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="adminBTN" layoutX="40.0" layoutY="365.0" mnemonicParsing="false"
+                                        onAction="#adminHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Administrador">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="settingsBTN" layoutX="40.0" layoutY="395.0" mnemonicParsing="false"
+                                        onAction="#settingsHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Definições">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="370.0">
+                                    <image>
+                                        <Image url="@../../../icons/user.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="400.0">
+                                    <image>
+                                        <Image url="@../../../icons/global-settings.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="16.0" layoutY="280.0">
+                                    <image>
+                                        <Image url="@../../../icons/management-icon.png"/>
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="logoutBTN" layoutX="40.0" layoutY="555.0" mnemonicParsing="false"
+                                        onAction="#logoutHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Logout">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="gestaoVeiculoBTN" layoutX="40.0" layoutY="305.0" mnemonicParsing="false"
+                                        onAction="#gestaoVeiculoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Gestão Veículos">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="16.0" layoutY="310.0">
+                                    <image>
+                                        <Image url="@../../../icons/carro.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane prefHeight="314.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="-407.0" prefHeight="600.0" prefWidth="898.0">
+                            <children>
+                                <TextField fx:id="pesquisar_label" layoutX="29.0" layoutY="35.0"
+                                           onAction="#pesquisarHandle" promptText="Pesquisar ID Aluguer"/>
+                                <Label layoutX="100.0" layoutY="315.0" text="ID Veículo:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="id_veiculo_label" layoutX="225.0" layoutY="315.0" prefHeight="26.0"
+                                           prefWidth="149.0"/>
+                                <Label layoutX="100.0" layoutY="415.0" text="ID Pedido:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="id_pedido_label" layoutX="225.0" layoutY="415.0" prefHeight="26.0"
+                                           prefWidth="149.0"/>
+                                <Label layoutX="100.0" layoutY="465.0" text="Desconto %:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="470.0" layoutY="315.0" text="Data Início:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="470.0" layoutY="365.0" text="Data Fim:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label layoutX="470.0" layoutY="415.0" text="Data Entrega:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <DatePicker fx:id="data_inicio_datepicker" layoutX="600.0" layoutY="315.0"/>
+                                <DatePicker fx:id="data_fim_datepicker" layoutX="600.0" layoutY="365.0"/>
+                                <DatePicker fx:id="data_entrega_datepicker" layoutX="600.0" layoutY="415.0"/>
+                                <Button fx:id="selecionarServicosBTN" layoutX="470.0" layoutY="465.0"
+                                        mnemonicParsing="false" onAction="#selecionarServicosHandle" prefHeight="25.0"
+                                        prefWidth="305.0" styleClass="botao" stylesheets="@style-light-mode.css"
+                                        text="Serviços">
+                                    <font>
+                                        <Font size="13.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="desconto_label" layoutX="225.0" layoutY="465.0" prefHeight="25.0"
+                                           prefWidth="150.0"/>
+                                <Label layoutX="100.0" layoutY="365.0" text="ID Condutor:">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="id_condutor_label" layoutX="225.0" layoutY="365.0" prefHeight="26.0"
+                                           prefWidth="149.0"/>
+                                <Button fx:id="limparButton" layoutX="424.0" layoutY="513.0" mnemonicParsing="false"
+                                        onAction="#limparHandle" prefHeight="42.0" prefWidth="93.0" styleClass="botao"
+                                        stylesheets="@style-light-mode.css" text="Limpar">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <AnchorPane layoutX="25.0" layoutY="75.0" minHeight="0.0" minWidth="0.0">
+                                    <children>
+                                        <TableView fx:id="tableView" onMouseClicked="#loadDados" prefHeight="200.0"
+                                                   prefWidth="850.0">
+                                            <columns>
+                                                <TableColumn fx:id="id_aluguer_coluna" prefWidth="105.60000306367874"
+                                                             text="ID Aluguer"/>
+                                                <TableColumn fx:id="id_veiculo_coluna" prefWidth="107.20001220703125"
+                                                             text="ID Veiculo"/>
+                                                <TableColumn fx:id="id_condutor_coluna" maxWidth="105.59999084472656"
+                                                             prefWidth="105.59999084472656" text="ID Condutor"/>
+                                                <TableColumn fx:id="id_pedido_coluna" maxWidth="101.5999755859375"
+                                                             prefWidth="101.5999755859375" text="ID Pedido"/>
+                                                <TableColumn fx:id="data_inicio_coluna" maxWidth="101.5999755859375"
+                                                             prefWidth="101.5999755859375" text="Data Inicio"/>
+                                                <TableColumn fx:id="data_fim_coluna" maxWidth="109.5999755859375"
+                                                             prefWidth="106.4000244140625" text="Data Fim"/>
+                                                <TableColumn fx:id="data_entrega_coluna" maxWidth="101.59991455078125"
+                                                             prefWidth="101.59991455078125" text="Data Entrega"/>
+                                                <TableColumn fx:id="desconto_coluna" maxWidth="131.20001220703125"
+                                                             prefWidth="101.60015869140625" text="Desconto %"/>
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="adicionarButton" layoutX="362.0" layoutY="512.0" mnemonicParsing="false"
+                                onAction="#adicionarHandle" prefHeight="42.0" prefWidth="93.0" styleClass="botao"
+                                stylesheets="@style-light-mode.css" text="Adicionar">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="atualizarButton" layoutX="246.0" layoutY="512.0" mnemonicParsing="false"
+                                onAction="#atualizarHandle" prefHeight="42.0" prefWidth="93.0" styleClass="botao"
+                                stylesheets="@style-light-mode.css" text="Atualizar">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="eliminarButton" layoutX="131.0" layoutY="512.0" mnemonicParsing="false"
+                                onAction="#eliminarHandle" prefHeight="42.0" prefWidth="93.0" styleClass="botao"
+                                stylesheets="@style-light-mode.css" text="Eliminar">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+        <Button fx:id="closeBTN" layoutX="1045.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="fechar" stylesheets="@style-light-mode.css" text="x"/>
+        <Button fx:id="minimizeBTN" layoutX="995.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimizeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="minimizar" stylesheets="@style-light-mode.css" text="-"/>
+        <Button fx:id="dragBTN" layoutX="205.0" layoutY="2.0" mnemonicParsing="false" onMouseDragged="#dragHandle"
+                onMousePressed="#dragPress" prefWidth="785.0" styleClass="arrastar"
+                stylesheets="@style-light-mode.css"/>
+    </children>
+</Pane>

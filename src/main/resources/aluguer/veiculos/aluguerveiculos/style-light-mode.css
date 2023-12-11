@@ -1,0 +1,65 @@
+.botao {
+    -fx-background-color: linear-gradient(to bottom right, #155e63, #1e868d);
+    -fx-text-fill: white;
+}
+
+.botao:hover {
+    -fx-background-color: linear-gradient(to bottom right, #155e6380, #1e868d80);
+    -fx-cursor: hand;
+}
+
+.widget {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.botaoMenu {
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+}
+
+.botaoMenu:hover {
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.left-form {
+    -fx-background-color: linear-gradient(to bottom right, #155e63, #1e868d);
+}
+
+.right-form {
+    -fx-background-color: #ffffff;
+}
+
+.textoPreto {
+    -fx-text-fill: black;
+}
+
+.fechar {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 20px;
+    -fx-padding: -10;
+}
+
+.fechar:hover {
+    -fx-background-color: #d11a2a;
+    -fx-text-fill: white;
+}
+
+.minimizar {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 20px;
+    -fx-padding: -10;
+}
+
+.minimizar:hover {
+    -fx-background-color: #008cba;
+    -fx-text-fill: white;
+}
+
+.arrastar {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}

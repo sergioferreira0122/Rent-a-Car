@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19"
+      fx:controller="aluguer.veiculos.aluguerveiculos.Controllers.GestaoGeralController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1100.0">
+            <left>
+                <AnchorPane prefHeight="600.0" prefWidth="202.0" styleClass="left-form"
+                            stylesheets="@style-light-mode.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane prefHeight="600.0" prefWidth="202.0" styleClass="left-form"
+                                    stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="26.0" layoutY="14.0">
+                                    <image>
+                                        <Image url="@../../../icons/user.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label layoutX="55.0" layoutY="150.0" styleClass="textoPreto"
+                                       stylesheets="@style-light-mode.css" text="Bem-Vindo,">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="nomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0"
+                                       layoutY="175.0" prefWidth="165.0" styleClass="textoPreto"
+                                       stylesheets="@style-light-mode.css" text="Placeholder" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="homepageBTN" layoutX="40.0" layoutY="245.0" mnemonicParsing="false"
+                                        onAction="#homepageHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Página Inicial">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="pedidoBTN" layoutX="40.0" layoutY="335.0" mnemonicParsing="false"
+                                        onAction="#pedidoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Fazer Pedido">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Line endX="60.99998474121094" endY="-1.52587890625E-5" layoutX="120.0" layoutY="220.0"
+                                      startX="-100.0"/>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="250.0">
+                                    <image>
+                                        <Image url="@../../../icons/home.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="560.0">
+                                    <image>
+                                        <Image url="@../../../icons/logout.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="340.0">
+                                    <image>
+                                        <Image url="@../../../icons/plus.png"/>
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="gestaoBTN" layoutX="40.0" layoutY="275.0" mnemonicParsing="false"
+                                        onAction="#gestaoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Gestão">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="adminBTN" layoutX="40.0" layoutY="365.0" mnemonicParsing="false"
+                                        onAction="#adminHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Administrador">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="settingsBTN" layoutX="40.0" layoutY="395.0" mnemonicParsing="false"
+                                        onAction="#settingsHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Definições">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="370.0">
+                                    <image>
+                                        <Image url="@../../../icons/user.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="16.0" layoutY="400.0">
+                                    <image>
+                                        <Image url="@../../../icons/global-settings.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="16.0" layoutY="280.0">
+                                    <image>
+                                        <Image url="@../../../icons/management-icon.png"/>
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="logoutBTN" layoutX="40.0" layoutY="555.0" mnemonicParsing="false"
+                                        onAction="#logoutHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Logout">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="gestaoVeiculoBTN" layoutX="40.0" layoutY="305.0" mnemonicParsing="false"
+                                        onAction="#gestaoVeiculoHandle" styleClass="botaoMenu"
+                                        stylesheets="@style-light-mode.css" text="Gestão Veículos">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="16.0" layoutY="310.0">
+                                    <image>
+                                        <Image url="@../../../icons/carro.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="75.0" layoutY="50.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="47.0" fitWidth="53.0" layoutX="48.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/aluguer.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Aluguer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="aluguerBTN" mnemonicParsing="false" onAction="#aluguerHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="aluguer_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="320.0" layoutY="50.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/clientes.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Cliente">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="clienteBTN" mnemonicParsing="false" onAction="#clienteHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="cliente_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="570.0" layoutY="50.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/condutor.jpg"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Condutor">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="condutorBTN" mnemonicParsing="false" onAction="#condutorHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="condutor_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="75.0" layoutY="225.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/fatura.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Fatura">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="faturaBTN" mnemonicParsing="false" onAction="#faturaHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="fatura_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="320.0" layoutY="225.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/marca.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Marca">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="marcaBTN" mnemonicParsing="false" onAction="#marcaHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="marca_label" layoutX="34.0" layoutY="122.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="570.0" layoutY="225.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/modelo.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Modelo">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="modeloBTN" mnemonicParsing="false" onAction="#modeloHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="modelo_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="75.0" layoutY="400.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/recibo.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Recibo">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="reciboBTN" mnemonicParsing="false" onAction="#reciboHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="recibo_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="320.0" layoutY="400.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/servico.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Serviço">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="servicoBTN" mnemonicParsing="false" onAction="#servicoHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="servico_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="570.0" layoutY="400.0" prefHeight="150.0" prefWidth="150.0"
+                                    styleClass="botao" stylesheets="@style-light-mode.css">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="50.0" layoutY="30.0">
+                                    <image>
+                                        <Image url="@../../../icons/reparacao.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefWidth="150.0"
+                                       styleClass="textoPreto" stylesheets="@style-light-mode.css" text="Reparação">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="reparacaoBTN" mnemonicParsing="false" onAction="#reparacaoHandle"
+                                        prefHeight="150.0" prefWidth="150.0" styleClass="widget"
+                                        stylesheets="@style-light-mode.css"/>
+                                <Label fx:id="reparacao_label" layoutX="35.0" layoutY="121.0"/>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+        <Button fx:id="closeBTN" layoutX="1045.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="fechar" stylesheets="@style-light-mode.css" text="x"/>
+        <Button fx:id="minimizeBTN" layoutX="995.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimizeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="minimizar" stylesheets="@style-light-mode.css" text="-"/>
+        <Button fx:id="dragBTN" layoutX="205.0" layoutY="2.0" mnemonicParsing="false" onMouseDragged="#dragHandle"
+                onMousePressed="#dragPress" prefWidth="785.0" styleClass="arrastar"
+                stylesheets="@style-light-mode.css"/>
+    </children>
+</Pane>

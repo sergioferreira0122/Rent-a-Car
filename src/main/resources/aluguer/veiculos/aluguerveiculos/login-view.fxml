@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1"
+      fx:controller="aluguer.veiculos.aluguerveiculos.Controllers.LoginController">
+    <children>
+        <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="right-form"
+                    stylesheets="@style-light-mode.css">
+            <children>
+                <Label layoutX="79.0" layoutY="128.0" prefHeight="35.0" prefWidth="141.0" styleClass="textoPreto"
+                       stylesheets="@style-light-mode.css" text="Bem-Vindo!">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="emailLabel" layoutX="50.0" layoutY="187.0" onAction="#loginHandle" prefWidth="200.0"
+                           promptText="E-Mail"/>
+                <Button fx:id="loginButton" layoutX="50.0" layoutY="298.0" mnemonicParsing="false"
+                        onAction="#loginHandle" prefHeight="40.0" prefWidth="200.0" styleClass="botao"
+                        stylesheets="@style-light-mode.css" text="Login"/>
+                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="38.0">
+                    <image>
+                        <Image url="@../../../icons/user.png"/>
+                    </image>
+                </ImageView>
+                <CheckBox fx:id="guardarCredenciaisCheckbox" layoutX="50.0" layoutY="265.0" mnemonicParsing="false"
+                          onAction="#handleGuardarCredencias" text="Guardar credenciais"/>
+                <CheckBox fx:id="passwordCB" layoutX="257.0" layoutY="239.0" mnemonicParsing="false"
+                          onAction="#togglePasswordCB"/>
+                <TextField fx:id="passwordShownLabel" layoutX="50.0" layoutY="235.0" onAction="#loginHandle"
+                           prefHeight="25.0" prefWidth="200.0"/>
+                <PasswordField fx:id="passwordHiddenLabel" layoutX="50.0" layoutY="235.0" onAction="#loginHandle"
+                               prefWidth="200.0" promptText="Palavra-passe"/>
+                <!--<Hyperlink fx:id="registerHL" layoutX="121.0" layoutY="345.0" onAction="#registerHandle" text="Registar" />-->
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="left-form" stylesheets="@style-light-mode.css">
+            <children>
+                <Label layoutX="45.0" layoutY="238.0" styleClass="textoPreto" stylesheets="@style-light-mode.css"
+                       text="Rent a Car">
+                    <font>
+                        <Font name="Candara Bold" size="48.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="50.0" layoutY="49.0">
+                    <image>
+                        <Image url="@../../../icons/carro.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="closeBTN" layoutX="545.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="fechar" stylesheets="@style-light-mode.css" text="x"/>
+        <Button fx:id="minimizeBTN" layoutX="495.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimizeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="minimizar" stylesheets="@style-light-mode.css" text="-"/>
+        <Button fx:id="dragBTN" layoutX="5.0" layoutY="2.0" mnemonicParsing="false" onMouseDragged="#dragHandle"
+                onMousePressed="#dragPress" prefWidth="485.0" styleClass="arrastar"
+                stylesheets="@style-light-mode.css"/>
+    </children>
+</Pane>

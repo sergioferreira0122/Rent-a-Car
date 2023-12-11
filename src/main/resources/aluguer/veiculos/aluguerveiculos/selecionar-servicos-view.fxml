@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19"
+      fx:controller="aluguer.veiculos.aluguerveiculos.Controllers.SelecionarServicosController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1100.0">
+            <children>
+                <TextField fx:id="pesquisar_label" layoutX="100.0" layoutY="40.0" onAction="#pesquisarHandle"
+                           promptText="Pesquisar por ID Aluguer"/>
+                <Label layoutX="100.0" layoutY="315.0" text="ID Aluguer:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="100.0" layoutY="365.0" text="ID Serviço:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <ScrollPane layoutX="100.0" layoutY="75.0" prefHeight="200.0" prefWidth="900.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tabela" onMouseClicked="#loadDados" prefHeight="200.0"
+                                           prefWidth="1000.0">
+                                    <columns>
+                                        <TableColumn fx:id="id_aluguer_coluna" prefWidth="101.0" text="ID Aluguer"/>
+                                        <TableColumn fx:id="id_servico_coluna" prefWidth="116.0" text="ID Serviço"/>
+                                        <TableColumn fx:id="desconto_coluna" maxWidth="236.800048828125"
+                                                     prefWidth="116.0" text="Desconto %"/>
+                                        <TableColumn fx:id="servico_coluna" prefWidth="148.0" text="Serviço"/>
+                                        <TableColumn fx:id="preco_coluna" prefWidth="100.0" text="Preço"/>
+                                        <TableColumn fx:id="descricao_coluna" prefWidth="319.0" text="Descrição"/>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <Label layoutX="100.0" layoutY="405.0" text="Desconto %:">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="id_servico_label" layoutX="207.0" layoutY="366.0" prefHeight="26.0"
+                           prefWidth="175.0"/>
+                <TextField fx:id="id_aluguer_label" layoutX="207.0" layoutY="316.0" prefHeight="26.0"
+                           prefWidth="175.0"/>
+                <TextField fx:id="desconto_label" layoutX="207.0" layoutY="406.0" prefHeight="26.0" prefWidth="175.0"/>
+                <Button layoutX="1000.0" layoutY="540.0" mnemonicParsing="false" onAction="#adicionarHandle"
+                        prefHeight="45.0" prefWidth="90.0" styleClass="botao" stylesheets="@style-light-mode.css"
+                        text="Adicionar">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="eliminar_button" layoutX="900.0" layoutY="540.0" mnemonicParsing="false"
+                        onAction="#eliminarHandle" prefHeight="45.0" prefWidth="90.0" styleClass="botao"
+                        stylesheets="@style-light-mode.css" text="Eliminar">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="800.0" layoutY="540.0" mnemonicParsing="false" onAction="#atualizarHandle"
+                        prefHeight="45.0" prefWidth="90.0" styleClass="botao" stylesheets="@style-light-mode.css"
+                        text="Atualizar">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="703.0" layoutY="540.0" mnemonicParsing="false" onAction="#limparHandle"
+                        prefHeight="45.0" prefWidth="90.0" styleClass="botao" stylesheets="@style-light-mode.css"
+                        text="Limpar">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Button fx:id="closeBTN" layoutX="1045.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="fechar" stylesheets="@style-light-mode.css" text="x"/>
+        <Button fx:id="minimizeBTN" layoutX="995.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimizeHandle"
+                prefHeight="25.0" prefWidth="50.0" styleClass="minimizar" stylesheets="@style-light-mode.css" text="-"/>
+        <Button fx:id="dragBTN" layoutX="15.0" layoutY="2.0" mnemonicParsing="false" onMouseDragged="#dragHandle"
+                onMousePressed="#dragPress" prefHeight="25.0" prefWidth="975.0" styleClass="arrastar"
+                stylesheets="@style-light-mode.css"/>
+    </children>
+</Pane>
